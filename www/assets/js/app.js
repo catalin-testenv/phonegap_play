@@ -42,16 +42,7 @@ renderer.setSize(SCENE_WIDTH, SCENE_HEIGHT);
 camera.position.z = 5;
 scene.add(cube);
 
-slider_1.slider({ min: 0.01, max: 1, step: 0.01, value: 0.5, orientation: "horizontal", slide: function (event, ui) {
-        cube.scale.y = ui.value * 2;
-    } });
-slider_2.slider({ min: 0.01, max: 1, step: 0.01, value: 0.5, orientation: "horizontal", slide: function (event, ui) {
-        cube.scale.x = ui.value * 2;
-    } });
-
 stage.append(renderer.domElement);
-inputs.append(slider_1);
-inputs.append(slider_2);
 
 mainLoop();
 
