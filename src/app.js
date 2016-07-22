@@ -1,8 +1,5 @@
 
 let stage = $('#stage');
-let inputs = $('#inputs');
-let slider_1 = $('<div></div>');
-let slider_2 = $('<div></div>');
 
 const SCENE_WIDTH = stage.width();
 const SCENE_HEIGHT = stage.height();
