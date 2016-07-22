@@ -40,21 +40,65 @@
 
     <link rel="stylesheet" type="text/css" href="css/index.css" />
     <title>Hello World</title>
+    <style>
+        .clearfix:before, .clearfix:after { content: ""; display: table; }
+        .clearfix:after { clear: both; }
+        .clearfix { zoom: 1; }
+
+        body { margin: 0; }
+        canvas { width: 100%; height: 100% }
+
+        #stage {
+            width: 400px;
+            height: 400px;
+            float: left;
+        }
+
+        #control_panel {
+            width: 300px;
+            float: left;
+            margin-left: 50px;
+        }
+
+        #inputs > * {
+            margin-top: 20px;
+        }
+
+    </style>
 </head>
 
 <body>
-    <div class="app">
-        <h1>PhoneGap</h1>
-        <div id="deviceready" class="blink">
-            <p class="event listening">Connecting to Device</p>
-            <p class="event received">Device is Ready</p>
+    <div class="clearfix">
+        <div id="stage"></div>
+        <div id="control_panel">
+            <div id="info"></div>
+            <div id="inputs"></div>
         </div>
     </div>
+
+    <link type="text/css" rel="stylesheet" href="assets/vendor/jqueryUI/jquery-ui.min.css">
+    <link type="text/css" rel="stylesheet" href="assets/vendor/jqueryUI/jquery-ui.structure.min.css">
+    <link type="text/css" rel="stylesheet" href="assets/vendor/jqueryUI/jquery-ui.theme.min.css">
     <script type="text/javascript" src="cordova.js"></script>
-    <script type="text/javascript" src="js/index.js"></script>
-    <script type="text/javascript">
-        app.initialize();
-    </script>
+    <script src="assets/vendor/jquery/jquery-2.2.3.min.js"></script>
+    <script src="assets/vendor/jqueryUI/jquery-ui.min.js"></script>
+    <script src="assets/vendor/threejs/js/three.js"></script>
+    <script src="assets/vendor/threejs/extra/OrbitControls.js"></script>
+    <script src="assets/js/app.js"></script>
+
+    <!--Hello world original-->
+    <!--<div class="app">-->
+        <!--<h1>PhoneGap</h1>-->
+        <!--<div id="deviceready" class="blink">-->
+            <!--<p class="event listening">Connecting to Device</p>-->
+            <!--<p class="event received">Device is Ready</p>-->
+        <!--</div>-->
+    <!--</div>-->
+    <!--<script type="text/javascript" src="cordova.js"></script>-->
+    <!--<script type="text/javascript" src="js/index.js"></script>-->
+    <!--<script type="text/javascript">-->
+        <!--app.initialize();-->
+    <!--</script>-->
 </body>
 
 </html>
